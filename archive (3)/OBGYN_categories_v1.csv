@@ -1,0 +1,60 @@
+procedure_concept_id,concept_name,category according to domain expert
+40379574,Follow-up consultation,Consultation
+42628265,Follow-up obstetrical consultation,Consultation
+44816370,Interprofessional telephone/Internet assessment and management service provided by a consultative physician including a verbal and written report to the patient's treating/requesting physician or other qualified health care professional; 31 minutes or mor,Consultation
+42628264,New obstetrical consultation,Consultation
+40315949,New patient consultation,Consultation
+42738986,"Telephone call by a physician to patient or for consultation or medical management or for coordinating medical management with other health care professionals (eg, nurses, therapists, social workers, nutritionists, physicians, pharmacists)",Consultation
+40308231,Caesarean section,Delivery
+40308223,Preterm labor (16 to 28 weeks),Delivery
+4167018,Vaginal delivery with forceps including postpartum care,Delivery
+4331179,"Vaginal delivery, medical personnel present",Delivery
+40299504,Cervix biopsy: [surgical] or [cone],Diagnostic
+4112477,Chlamydia swab,Diagnostic
+40352855,Colposcopy,Diagnostic
+40307727,Colpotomy,Diagnostic
+4296594,Diagnostic laparoscopy,Diagnostic
+45889037,Diagnostic Ultrasound Procedures of the Stomach Organs,Diagnostic
+40258926,Hysteroscopy,Diagnostic
+4060027,Intrapartum monitoring of fetus with pulsed Doppler ultrasound,Diagnostic
+40282186,Papanicolaou test,Diagnostic
+4082534,Ultrasonography for antepartum monitoring of fetus,Diagnostic
+4074860,Abdominal excision of uterus NOS,Procedure
+45890386,Abortion Procedures,Procedure
+2004407,Amputation of cervix,Procedure
+40308188,Bilateral vulvectomy,Procedure
+40307678,Cervical electroconisation,Procedure
+4003896,Cervix excision,Procedure
+40314598,Closure of perforated bowel ,Procedure
+4119582,Condyloma acuminata cautery,Procedure
+40310668,Contraceptive method: female sterilisation,Procedure
+40598550,Cryosurgery,Procedure
+2110301,"Curettage, postpartum",Procedure
+45889541,"Debridement, muscle and/or fascia (includes epidermis, dermis, and subcutaneous tissue, if performed)",Procedure
+4080255,Debulking of tumour of unspecified organ,Procedure
+2110098,Excision of vaginal cyst or tumor,Procedure
+4253523,Exploratory laparotomy,Procedure
+4124157,Female sterilisation operation NOS,Procedure
+4185403,Hysteroscopy with lysis of intrauterine adhesions,Procedure
+2110224,"Hysteroscopy, surgical; with division or resection of intrauterine septum (any method)",Procedure
+2722226,"Hysteroscopy, surgical; with removal of impacted foreign body.",Procedure
+40757042,"Injection(s), diagnostic or therapeutic agent",Procedure
+2109120,"Intestinal stricturoplasty (enterotomy and enterorrhaphy) with or without dilation, for intestinal obstruction",Procedure
+2004826,Manual removal of retained placenta,Procedure
+2110172,"Myomectomy, excision of fibroid tumor(s) of uterus, 1 to 4 intramural myoma(s) with total weight of 250 g or less and/or removal of surface myomas; abdominal approach",Procedure
+4142400,Other repair of vaginal prolapse,Procedure
+4237489,Removel of large and complex growth,Procedure
+4179969,Repair of cicatricial hernia,Procedure
+4304920,Repair of enterocele by abdominal approach,Procedure
+45889401,Repair of high imperforate anus with rectourethral or rectovaginal fistula,Procedure
+4032167,Repair of ovary,Procedure
+2103694,Repair of total ruptured uterine,Procedure
+4146389,Repair of vaginal prolapse and amputation of cervix uteri NOS,Procedure
+4125983,Schroeder operation for cervical myomectomy,Procedure
+4074572,Therapeutic endoscopic operation on ovary NOS,Procedure
+45888089,Therapeutic laparoscopy,Procedure
+40307076,Urinary incontinence/sling operation,Procedure
+40402912,Uterine operation,Procedure
+4102786,Vaginal enterocelectomy,Procedure
+45889752,"Vaginal hysterectomy, for uterus 250 g or less",Procedure
+40258617,Vulvectectomy and block dissection of inguinal lymph nodes,Procedure

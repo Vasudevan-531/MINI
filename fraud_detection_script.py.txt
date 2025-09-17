@@ -1,0 +1,96 @@
+# fraud_detection_script.py
+
+import os
+import pandas as pd
+import random
+import pytesseract
+from PIL import Image
+
+# ==== Step 1: Load CSV datasets ====
+def load_datasets():
+    claims_csv = "/content/enhanced_health_insurance_claims.csv"
+    categories_csv = "/content/OBGYN_categories_v2.csv"
+
+    claims_df = pd.read_csv(claims_csv)
+    categories_df = pd.read_csv(categories_csv)
+
+    return claims_df, categories_df
+
+# ==== Step 2: Pick a random claim form image ====
+def get_random_claim_form():
+    sample_docs_folder = "/content/scanned_forms"
+
+    if not os.path.exists(sample_docs_folder):
+        raise FileNotFoundError(f"Folder not found: {sample_docs_folder}")
+
+    sample_docs = [
+        os.path.join(sample_docs_folder, f)
+        for f in os.listdir(sample_docs_folder)
+        if f.lower().endswith((".png", ".jpg", ".jpeg"))
+    ]
+
+    if not sample_docs:
+        raise FileNotFoundError("No scanned claim document images found.")
+
+    return random.choice(sample_docs)
+
+# ==== Step 3: OCR Extraction from the claim form ====
+def extract_text_from_image(image_path):
+    img = Image.open(image_path)
+    text = pytesseract.image_to_string(img)
+    return text
+
+# ==== Step 4: Simple Fraud Detection Rules ====
+def detect_fraud(claim, categories_df, extracted_text):
+    issues = []
+
+    # Rule 1: Check if claim amount is too high
+    if claim["ClaimAmount"] > 50000:
+        issues.append("High claim amount")
+
+    # Rule 2: Check if category is valid
+    if claim["ClaimCategory"] not in categories_df["Category"].values:
+        issues.append("Invalid claim category")
+
+    # Rule 3: Check if Patient Name appears in scanned form
+    if claim["PatientName"].lower() not in extracted_text.lower():
+        issues.append("Patient name mismatch in scanned form")
+
+    # Rule 4: Random simple fraud suspicion
+    if "test" in extracted_text.lower():
+        issues.append("Suspicious keyword found: 'test'")
+
+    return issues
+
+# ==== Step 5: Run the Fraud Detection Process ====
+def main():
+    # Load data
+    claims_df, categories_df = load_datasets()
+
+    # Pick a random claim from CSV
+    random_claim = claims_df.sample(n=1).iloc[0]
+
+    # Pick a random scanned form image
+    claim_doc_path = get_random_claim_form()
+
+    # Extract text from scanned image
+    extracted_text = extract_text_from_image(claim_doc_path)
+
+    # Detect fraud
+    fraud_issues = detect_fraud(random_claim, categories_df, extracted_text)
+
+    # Show results
+    print("=== Randomly Selected Claim ===")
+    print(random_claim)
+    print("\n=== OCR Extracted Text ===")
+    print(extracted_text)
+    print("\n=== Fraud Check Results ===")
+    if fraud_issues:
+        for issue in fraud_issues:
+            print(f"- {issue}")
+    else:
+        print("No fraud detected.")
+
+# ==== Step 6: Run if executed directly ====
+if __name__ == "__main__":
+    main()

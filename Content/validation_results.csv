@@ -1,0 +1,4 @@
+ClaimID,Name,ClaimType,ClaimAmount,validation_status,validation_reasons
+101,John Doe,Health,2,Valid,
+102,Mary Smith,Health,2,Valid,
+103,,Health,4,Invalid,Missing Name

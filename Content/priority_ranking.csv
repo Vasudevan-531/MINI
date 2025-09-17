@@ -1,0 +1,3 @@
+ClaimID,Name,ClaimType,ClaimAmount,validation_status,validation_reasons,priority_score
+101,John Doe,Health,2,Valid,,1
+102,Mary Smith,Health,2,Valid,,2
